@@ -10,4 +10,5 @@ public class GetCollection : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
 }
