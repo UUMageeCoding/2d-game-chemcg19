@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 2a8cf3e8bc5dbc5488f0b5d146651e85
+guid: ac37aa997b8b5ed408db5b7dc8818947
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6782770468422943474
-    second: ParallaxCave3_0
+      213: 4429606449169698612
+    second: Cat_run_1_0
+  - first:
+      213: 7639894372209067122
+    second: Cat_run_1_1
+  - first:
+      213: -4954768267044834483
+    second: Cat_run_1_2
+  - first:
+      213: -4173364754345792755
+    second: Cat_run_1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ParallaxCave3_0
+      name: Cat_run_1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 1152
-        height: 1088
+        width: 25
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0df3a41232ced1a0800000000000000
-      internalID: -6782770468422943474
+      spriteID: 43f0a81b89f197d30800000000000000
+      internalID: 4429606449169698612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_run_1_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2740701247b560a60800000000000000
+      internalID: 7639894372209067122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_run_1_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d433a6a33802d3bb0800000000000000
+      internalID: -4954768267044834483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_run_1_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b651b0eda3516c0800000000000000
+      internalID: -4173364754345792755
       vertices: []
       indices: 
       edges: []
@@ -134,8 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ParallaxCave3_0: -6782770468422943474
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -7,6 +7,10 @@ TagManager:
   - triggerObject
   - Ground
   - Enemy
+  - Follower
+  - SafeZone
+  - triggerObjectTag
+  - Activator
   layers:
   - Default
   - TransparentFX

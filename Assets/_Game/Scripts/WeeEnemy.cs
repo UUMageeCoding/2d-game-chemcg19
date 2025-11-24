@@ -4,12 +4,14 @@ public class WeeEnemy : MonoBehaviour
 {
     public Transform PlayerPosition;
     Vector2 directionPlayer;
-    public float speed = 3f;
+
+    public float speed = 7f;
+
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+  
     }
 
     // Update is called once per frame

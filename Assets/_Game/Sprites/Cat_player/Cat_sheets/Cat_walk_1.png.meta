@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 2a8cf3e8bc5dbc5488f0b5d146651e85
+guid: 3792826e92c862343af697c3d4912c9e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6782770468422943474
-    second: ParallaxCave3_0
+      213: 1040611843020108027
+    second: Cat_walk_1_0
+  - first:
+      213: 7094001182700943242
+    second: Cat_walk_1_1
+  - first:
+      213: -1125772378257546069
+    second: Cat_walk_1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ParallaxCave3_0
+      name: Cat_walk_1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 1152
-        height: 1088
+        width: 22
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0df3a41232ced1a0800000000000000
-      internalID: -6782770468422943474
+      spriteID: bf0374435fef07e00800000000000000
+      internalID: 1040611843020108027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_walk_1_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8737137d74f27260800000000000000
+      internalID: 7094001182700943242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_walk_1_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba423009cf37060f0800000000000000
+      internalID: -1125772378257546069
       vertices: []
       indices: 
       edges: []
@@ -134,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ParallaxCave3_0: -6782770468422943474
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

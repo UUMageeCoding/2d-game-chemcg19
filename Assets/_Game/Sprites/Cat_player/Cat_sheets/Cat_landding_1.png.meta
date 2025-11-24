@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 2a8cf3e8bc5dbc5488f0b5d146651e85
+guid: 3633669000ea75e42878ee0dad6f19b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6782770468422943474
-    second: ParallaxCave3_0
+      213: -7752574336537330849
+    second: Cat_landding_1_0
+  - first:
+      213: 8515406021533353494
+    second: Cat_landding_1_1
+  - first:
+      213: -5910026532917940862
+    second: Cat_landding_1_2
+  - first:
+      213: 5072399174303502715
+    second: Cat_landding_1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ParallaxCave3_0
+      name: Cat_landding_1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 6
         y: 0
-        width: 1152
-        height: 1088
+        width: 21
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0df3a41232ced1a0800000000000000
-      internalID: -6782770468422943474
+      spriteID: f5bf1ef37b2596490800000000000000
+      internalID: -7752574336537330849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_landding_1_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 616c7b7f8accc2670800000000000000
+      internalID: 8515406021533353494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_landding_1_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28dea445e2e5bfda0800000000000000
+      internalID: -5910026532917940862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_landding_1_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71585f9c28c46640800000000000000
+      internalID: 5072399174303502715
       vertices: []
       indices: 
       edges: []
@@ -134,8 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ParallaxCave3_0: -6782770468422943474
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
