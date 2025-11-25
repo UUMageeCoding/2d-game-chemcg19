@@ -59,8 +59,15 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
-        
+
     }
+
+    public void TakeDamage(int amount)
+    {
+        currentHealth -= amount;
+        Debug.Log($"Player took {amount} damage. Health: {currentHealth}");
+    }
+
     private void UpdateHealthUI()
     {
         if (healthBar != null)

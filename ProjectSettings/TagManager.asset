@@ -11,6 +11,8 @@ TagManager:
   - SafeZone
   - triggerObjectTag
   - Activator
+  - StopCamera
+  - StopCam
   layers:
   - Default
   - TransparentFX

@@ -28,12 +28,4 @@ public class Follower : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
         transform.position += (Vector3)(direction * speed * Time.deltaTime);
     }
-
-    private void OTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag(triggerObjectTag))
-        {
-            target = newTarget;
-        }
-    }
 }
