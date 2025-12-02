@@ -48,6 +48,15 @@ public class PlatformerController : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
         }
+
+        
+        if (moveInput != 0)
+        {
+            Vector3 newScale = transform.localScale;
+            newScale.x = moveInput > 0 ? 1 : -1; // Flip horizontally
+            transform.localScale = newScale;
+        }
+
     }
     
     void FixedUpdate()

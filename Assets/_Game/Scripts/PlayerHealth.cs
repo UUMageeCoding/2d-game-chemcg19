@@ -1,22 +1,26 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-
     public float maxHealth = 100;
     public float currentHealth;
     public float damagePerSecond = 5;
 
     public Transform safeObject;
     public float safeDistance = 7f;
+
     [Header("UI")]
     public Slider healthBar;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [Header("Enemy Damage")]
+    public int collisionDamage = 20; // damage taken when colliding with enemy
+
+    [Header("Effects")]
+    public ParticleSystem hitEffect; // assign prefab in Inspector
+
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -25,10 +29,8 @@ public class PlayerHealth : MonoBehaviour
             healthBar.maxValue = maxHealth;
             healthBar.value = currentHealth;
         }
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (safeObject == null)
@@ -37,42 +39,37 @@ public class PlayerHealth : MonoBehaviour
             return;
         }
 
-        float distance = Vector2.Distance(transform.position, safeObject.position);
+        float distance = Vector3.Distance(transform.position, safeObject.position);
 
         if (distance > safeDistance)
         {
             TakeDamage(damagePerSecond * Time.deltaTime);
         }
-
     }
 
-    private void TakeDamage(float amount)
+    private void TakeDamage(float damage)
     {
-        currentHealth -= amount;
+        currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        if (healthBar != null)
-        {
-            healthBar.value = currentHealth;
-        }
+        UpdateHealthUI();
+
         if (currentHealth <= 0)
         {
             Die();
         }
-
     }
 
-    public void TakeDamage(int amount)
+    public void ApplyDamage(int damage)
     {
-        currentHealth -= amount;
-        Debug.Log($"Player took {amount} damage. Health: {currentHealth}");
+        TakeDamage(damage); // reuse float version
     }
 
     private void UpdateHealthUI()
     {
         if (healthBar != null)
         {
-            healthBar.value = (float)currentHealth / maxHealth;
+            healthBar.value = currentHealth;
         }
     }
 
@@ -80,5 +77,21 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("You died!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    //  Trigger with enemy (if enemy collider is set as trigger)
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+    if (other.CompareTag("Enemy"))
+        {
+        TakeDamage(collisionDamage);
+            Debug.Log("Player took damage! Current health: " + currentHealth);
+        
+            if (hitEffect != null)
+            {
+            // Spawn particle effect at player’s position
+                Instantiate(hitEffect, transform.position, Quaternion.identity);
+            }
+        }
     }
 }

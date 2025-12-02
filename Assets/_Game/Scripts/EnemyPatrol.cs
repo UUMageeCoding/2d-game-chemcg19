@@ -8,14 +8,16 @@ public class EnemyPatrol : MonoBehaviour
     public float speed = 2f;          // Movement speed
 
     [Header("Combat Settings")]
-    public int damageAmount = 20;
+    public int damage = 20;
 
     private Rigidbody2D rb;
     private Vector2 targetPosition;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Validate patrol points
         if (pointA == null || pointB == null)
@@ -34,23 +36,20 @@ public class EnemyPatrol : MonoBehaviour
         Vector2 newPosition = Vector2.MoveTowards(rb.position, targetPosition, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPosition);
 
+        // Flip sprite depending on direction
+        if (spriteRenderer != null)
+        {
+            if (newPosition.x < rb.position.x)
+                spriteRenderer.flipX = true;   // facing left
+            else if (newPosition.x > rb.position.x)
+                spriteRenderer.flipX = false;  // facing right
+        }
+
         // Check if we reached the target
         if (Vector2.Distance(rb.position, targetPosition) < 0.05f)
         {
             // Switch target
             targetPosition = (targetPosition == (Vector2)pointA.position) ? pointB.position : pointA.position;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Player"))
-        {
-            PlayerHealth playerHealth = collision.collider.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damageAmount);
-            }
         }
     }
 }
